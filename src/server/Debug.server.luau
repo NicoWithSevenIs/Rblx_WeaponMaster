@@ -11,11 +11,3 @@ local task_lookup = {
 ReplicatedStorage.Functions.Debug.OnServerInvoke = function(player, task)
 	return task_lookup[task](player)
 end
-
-task.wait(10)
-
-for _, player in pairs(PlayerManager.PlayerHandlerList) do
-	local curr = table.clone(player.current_stats)
-	curr.HP -= 50
-	player:SetStats(curr)
-end

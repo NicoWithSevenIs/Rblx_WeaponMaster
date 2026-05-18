@@ -11,7 +11,7 @@ UserInputService.InputEnded:Connect(function(input: InputObject, processed: bool
 		return
 	end
 	if input.KeyCode == Enum.KeyCode.C then
-		UI_StatViewScreen.SetWindowEnabled(not UI_StatViewScreen.Visible())
+		UI_StatViewScreen.SetWindowEnabled(not UI_StatViewScreen.IsVisible())
 	end
 end)
 

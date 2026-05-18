@@ -27,4 +27,8 @@ Events.OnStatsUpdated.OnClientEvent:Connect(function(base_stats: Types.Stats, cu
 	UI_StatViewScreen.OnStatsUpdated(base_stats, curr_stats)
 end)
 
+Events.OnBuildUpdated.OnClientEvent:Connect(function(build: Types.Player_Build)
+	UI_StatViewScreen.OnBuildUpdated(build)
+end)
+
 return DataReceiver
